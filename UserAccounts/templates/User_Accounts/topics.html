@@ -3,13 +3,16 @@
 
     <p>Topics</p>
 
-    <ul>
-        {% for topic in topics %}
-            <li>
-                <a href="{% url 'User_Accounts:topic' topic.id %}">{{ topic }}</a>
-            </li>
-        {% empty %}
-            <li>No topics have been added yet.</li>
-        {% endfor %}
-    </ul>
+<ul>
+    {% for topic in topics %}
+    <li>
+        <a href="{% url 'User_Accounts:topic' topic.id %}">{{ topic }}</a>
+    </li>
+    {% empty %}
+    <li>No topics have been added yet.</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'User_Accounts:new_topic' %}">Adicionar uma nova comissão</a>
+
 {% endblock content %}
